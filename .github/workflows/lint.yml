@@ -1,0 +1,36 @@
+name: Lint
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+permissions: {}
+
+jobs:
+  luacheck:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: lunarmodules/luacheck@cc089e3f65acdd1ef8716cc73a3eca24a6b845e4 # v1.2.0
+
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install Lua 5.1
+        run: sudo apt-get update && sudo apt-get install --yes lua5.1
+
+      - name: Run tests
+        run: lua5.1 tests/test.lua

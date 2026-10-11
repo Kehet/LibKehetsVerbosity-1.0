@@ -1,0 +1,7 @@
+## Interface: 50504
+## Title: Lib: KehetsVerbosity-1.0
+## Notes: Development copy of the message settings library of Kehet's addons
+## Author: Kehet
+## OptionalDeps: Ace3
+
+LibKehetsVerbosity-1.0.lua

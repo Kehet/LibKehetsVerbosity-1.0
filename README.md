@@ -145,6 +145,7 @@ To release a version, increase `MINOR` in `LibKehetsVerbosity-1.0.lua` and tag t
 ## Requirements
 
 - World of Warcraft: Mists of Pandaria Classic
+- World of Warcraft: Forever
 - AceAddon-3.0, AceConsole-3.0 and AceDB-3.0
 - AceConfig-3.0 and AceGUI-3.0 for the settings
 
